@@ -98,4 +98,20 @@ void update(char* oname, int oage, char* name, int age) {
 	delect1(oname);
 	insert(name, age);
 }
+
+
+void innerjoin(char* name, char* suject, int score) {
+	sprintf(query, "alter table huawei add records");
+	mysql_query(&mysql, query);
+	sprintf(query, "alter table huawei add foreign key(name) references records(cid);");
+	mysql_query(&mysql, query);
+
+}
+void leftjoin(char* name, char* suject, int score) {
+	sprintf(query, "alter table huawei add records");
+	mysql_query(&mysql, query);
+	sprintf(query, "alter table huawei add foreign key(name) references records(cid);");
+	mysql_query(&mysql, query);
+}
+
 	
