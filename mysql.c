@@ -103,12 +103,15 @@ void update(char* oname, int oage, char* name, int age) {
 void innerjoin(char* name, char* suject, int score) {
 	sprintf(query, "alter table huawei add records");
 	mysql_query(&mysql, query);
-	sprintf(query, "alter table huawei add foreign key(name) references records(cid);");
+	sprintf(query, "select name from huawei inner join records on huawei.name=records.name");
 	mysql_query(&mysql, query);
 
 }
 void leftjoin(char* name, char* suject, int score) {
-	
+	sprintf(query, "alter table huawei add records");
+	mysql_query(&mysql, query);
+	sprintf(query, "select name from huawei left join records on huawei.name=records.name");
+	mysql_query(&mysql, query);
 }
 
 	
