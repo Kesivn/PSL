@@ -13,27 +13,8 @@ List* hash[100];
 List head;
 List tail;
 
-int get(int key,List *p);
+int get(int key, List* p);
 int put(int key, int value);
-
-int chakan(List* p);
-
-int main() {
-	
-	
-	printf("设置最大值\n");
-	int i, j, k;
-	//scanf("%d", &i);
-	i = 5;
-	List* p;
-	List* q;
-	
-	
-
-
-
-	return 0;
-}
 
 int get(int key) {
 	int ans = -1;
@@ -41,7 +22,7 @@ int get(int key) {
 	return ans;
 }
 
-int put(int key,int value) {
+int put(int key, int value) {
 	int i;
 	List* p;
 	if (hash[key] != NULL) {
@@ -70,5 +51,5 @@ int put(int key,int value) {
 	}
 	return 0;
 
-	
+
 }
